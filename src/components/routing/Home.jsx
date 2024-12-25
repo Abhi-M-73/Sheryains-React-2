@@ -7,7 +7,6 @@ const Home = () => {
     <div className='w-[50%] mx-auto bg-gray-600 p-10 rounded mt-10'>
       Welcome to Home Page
       <FeedbackForm />
-
     </div>
   )
 };

@@ -7,7 +7,7 @@ const FeedbackForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Thank you for your feedback!');
-    navigate("/services")
+    navigate("/products")
   };
 
   return (
