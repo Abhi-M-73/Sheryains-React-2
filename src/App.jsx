@@ -9,8 +9,10 @@ import ProductDetails from './components/routing/ProductDetails'
 import PageNotFound from './components/routing/PageNotFound'
 
 const App = () => {
+
   return (
     <div className='text-white'>
+
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
