@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../../utils/axiosconfig';
 import React, { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
@@ -7,8 +7,7 @@ const Products = () => {
 
   const getAllProducts = async () => {
     try {
-      const res = await axios.get('https://fakestoreapi.com/products');
-      console.log(res.data);
+      const res = await axios.get('/products');
       setProducts(res.data);
     } catch (error) {
       console.log(error)
@@ -18,15 +17,16 @@ const Products = () => {
   return (
     <div className='w-[50%] mx-auto bg-gray-500 p-10 rounded mt-10'>
       <div className='text-center'><button onClick={getAllProducts} className='w-fit px-6 py-2 bg-indigo-600 text-white rounded mb-5'>Get Data</button></div>
-      <div  className='flex flex-wrap gap-3'>
-      {
-        products.map((item, index) => (
-            <div key={index} className='w-40 mb-5 bg-gray-700 p-2'>
+      <div className='flex flex-wrap gap-3'>
+        {
+          products.map((item, index) => (
+            <Link to={`/products/${item.id}`} key={index} className='w-40 mb-5 bg-gray-700 p-2'>
               <img src={item.image} alt={item.title} className='h-40 w-40' />
-              <Link to={`/products/${item.category}`} className="hover:text-gray-200 w-40 p-2">{item.title}</Link>
-            </div>
-        ))
-      }
+              <h1 className="hover:text-gray-200 w-40 p-2">{item.title}</h1>
+            </Link>
+
+          ))
+        }
       </div>
 
 
