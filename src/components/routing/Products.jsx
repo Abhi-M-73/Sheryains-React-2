@@ -1,5 +1,5 @@
 import axios from '../../utils/axiosconfig';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
 const Products = () => {
@@ -13,6 +13,10 @@ const Products = () => {
       console.log(error)
     }
   }
+
+  useEffect(() => {
+    getAllProducts();
+  }, [])
 
   return (
     <div className='w-[50%] mx-auto bg-gray-500 p-10 rounded mt-10'>

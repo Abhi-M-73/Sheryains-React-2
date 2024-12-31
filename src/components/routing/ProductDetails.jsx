@@ -18,9 +18,7 @@ const ProductDetails = () => {
           console.log('Error fetching product details:', error.response || error.message);
           setError('Failed to load product details');
         }
-      };
-      
-      
+      }; 
 
     getDetails();
   }, [id]);
