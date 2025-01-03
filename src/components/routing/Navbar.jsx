@@ -7,7 +7,7 @@ const Navbar = () => {
             <div className="container mx-auto flex items-center justify-center gap-10 p-4">
                 <Link to={"/"} className="hover:text-gray-200">Home</Link>
                 <Link to={"/products"} className="hover:text-gray-200">Products</Link>
-                <Link to={"/about"} className="hover:text-gray-200">About</Link>
+                <Link to={"/service"} className="hover:text-gray-200">Service</Link>
                 <Link to={"/contact"} className="hover:text-gray-200">Contact</Link>
 
                 {/* <NavLink to="/contact"

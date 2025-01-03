@@ -16,11 +16,11 @@ const Products = () => {
 
   useEffect(() => {
     getAllProducts();
-  }, [])
+  }, [products]);
 
   return (
     <div className='w-[50%] mx-auto bg-gray-500 p-10 rounded mt-10'>
-      <div className='text-center'><button onClick={getAllProducts} className='w-fit px-6 py-2 bg-indigo-600 text-white rounded mb-5'>Get Data</button></div>
+      <h1 className='text-2xl font-semibold mb-4 text-center'>All Products</h1>
       <div className='flex flex-wrap gap-3'>
         {
           products.map((item, index) => (
