@@ -13,10 +13,13 @@ const serviceSlice = createSlice({
     reducers : {
         addNewService : (state, action) => {
             state.data.push(action.payload);
+        },
+        removeService : (state, action) => {
+            state.data.splice(action.payload, 1);
         }
     }
 });
 
-export const {addNewService} = serviceSlice.actions;
+export const {addNewService, removeService} = serviceSlice.actions;
 export default serviceSlice.reducer;
 
